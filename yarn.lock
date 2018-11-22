@@ -25,6 +25,13 @@
   dependencies:
     redux "4.0.0"
 
+"@rematch/immer@^1.1.0":
+  version "1.1.0"
+  resolved "http://registry.npm.taobao.org/@rematch/immer/download/@rematch/immer-1.1.0.tgz#830cfa90315118e377750652f0b68ea5f686cbff"
+  integrity sha1-gwz6kDFRGON3dQZS8LaOpfaGy/8=
+  dependencies:
+    immer "^1.5.0"
+
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
   resolved "http://registry.npm.taobao.org/@sindresorhus/is/download/@sindresorhus/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
@@ -1911,6 +1918,11 @@ ignore@^3.3.5:
   version "3.3.10"
   resolved "http://registry.npm.taobao.org/ignore/download/ignore-3.3.10.tgz#0a97fb876986e8081c631160f8f9f389157f0043"
   integrity sha1-Cpf7h2mG6AgcYxFg+PnziRV/AEM=
+
+immer@^1.5.0:
+  version "1.8.0"
+  resolved "http://registry.npm.taobao.org/immer/download/immer-1.8.0.tgz#afa8393996a1f3f5255019e7d10c29d42dd95225"
+  integrity sha1-r6g5OZah8/UlUBnn0Qwp1C3ZUiU=
 
 inflight@^1.0.4:
   version "1.0.6"

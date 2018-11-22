@@ -1,18 +1,34 @@
 import { Component } from "@tarojs/taro";
 import { connect } from "@tarojs/redux";
-import { Button } from "@tarojs/components";
+import { Button, Input } from "@tarojs/components";
 
 @connect(
-  ({ count }) => ({ count }),
-  ({ count: { increment } }) => ({ increment })
+  ({ todo: { todos } }) => ({ todos }),
+  ({ todo: { add } }) => ({ add })
 )
 class Home extends Component {
+  state = {
+    text: ""
+  };
+  add = () => {
+    const { add } = this.props;
+    const { text } = this.state;
+    if (text) {
+      add(text);
+      this.setState({ text: "" });
+    }
+  };
+  handleChange = e => {
+    this.setState({ text: e.target.value });
+  };
   render() {
-    const { count, increment } = this.props;
+    const { todos } = this.props;
+    const { text } = this.state;
     return (
       <div>
-        {count}
-        <Button onClick={increment}>+</Button>
+        <Input value={text} onInput={this.handleChange} />
+        <Button onClick={this.add}>+</Button>
+        {todos}
       </div>
     );
   }
