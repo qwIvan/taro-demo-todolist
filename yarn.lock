@@ -18,6 +18,13 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
+"@rematch/core@^1.0.6":
+  version "1.0.6"
+  resolved "http://registry.npm.taobao.org/@rematch/core/download/@rematch/core-1.0.6.tgz#84677e62111f7d720c3ec552c1f9916353f4cbc3"
+  integrity sha1-hGd+YhEffXIMPsVSwfmRY1P0y8M=
+  dependencies:
+    redux "4.0.0"
+
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
   resolved "http://registry.npm.taobao.org/@sindresorhus/is/download/@sindresorhus/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
@@ -97,6 +104,13 @@
   integrity sha1-ERVlnLLv5llRdDHAYzEg9Cau1GA=
   dependencies:
     uglify-js "^3.3.24"
+
+"@tarojs/redux@^1.2.0-beta.1":
+  version "1.2.0-beta.1"
+  resolved "http://registry.npm.taobao.org/@tarojs/redux/download/@tarojs/redux-1.2.0-beta.1.tgz#04f5897582cc626a4450afa98b85abab830cef8f"
+  integrity sha1-BPWJdYLMYmpEUK+pi4Wrq4MM748=
+  dependencies:
+    "@tarojs/utils" "1.2.0-beta.1"
 
 "@tarojs/taro-weapp@^1.2.0-beta.1":
   version "1.2.0-beta.1"
@@ -2338,7 +2352,7 @@ log-symbols@^2.2.0:
   dependencies:
     chalk "^2.0.1"
 
-loose-envify@^1.0.0, loose-envify@^1.3.1:
+loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1:
   version "1.4.0"
   resolved "http://registry.npm.taobao.org/loose-envify/download/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha1-ce5R+nvkyuwaY4OffmgtgTLTDK8=
@@ -3009,6 +3023,14 @@ rechoir@^0.6.2:
   dependencies:
     resolve "^1.1.6"
 
+redux@4.0.0:
+  version "4.0.0"
+  resolved "http://registry.npm.taobao.org/redux/download/redux-4.0.0.tgz#aa698a92b729315d22b34a0553d7e6533555cc03"
+  integrity sha1-qmmKkrcpMV0is0oFU9fmUzVVzAM=
+  dependencies:
+    loose-envify "^1.1.0"
+    symbol-observable "^1.2.0"
+
 regenerate@^1.2.1:
   version "1.4.0"
   resolved "http://registry.npm.taobao.org/regenerate/download/regenerate-1.4.0.tgz#4a856ec4b56e4077c557589cae85e7a4c8869a11"
@@ -3454,6 +3476,11 @@ symbol-observable@1.0.1:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/symbol-observable/download/symbol-observable-1.0.1.tgz#8340fc4702c3122df5d22288f88283f513d3fdd4"
   integrity sha1-g0D8RwLDEi310iKI+IKD9RPT/dQ=
+
+symbol-observable@^1.2.0:
+  version "1.2.0"
+  resolved "http://registry.npm.taobao.org/symbol-observable/download/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
+  integrity sha1-wiaIrtTqs83C3+rLtWFmBWCgCAQ=
 
 tar@^4:
   version "4.4.8"

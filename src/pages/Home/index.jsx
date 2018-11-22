@@ -1,7 +1,19 @@
 import { Component } from "@tarojs/taro";
+import { connect } from "@tarojs/redux";
+import { Button } from "@tarojs/components";
 
-export default class Home extends Component {
+@connect(
+  ({ count }) => ({ count }),
+  ({ count: { increment } }) => ({ increment })
+)
+class Home extends Component {
   render() {
-    return <div>Home</div>;
+    const { count, increment } = this.props;
+    return (
+      <div>
+        {count}
+        <Button onClick={increment}>+</Button>
+      </div>
+    );
   }
 }
