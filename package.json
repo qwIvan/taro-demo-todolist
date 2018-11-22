@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build:weapp": "taro build --type weapp",
-    "dev:weapp": "npm run build:weapp -- --watch",
+    "dev:weapp": "yarn build:weapp -- --watch"
   },
   "dependencies": {
     "@tarojs/taro": "^1.2.0-beta.1",
