@@ -9,6 +9,8 @@
   "devDependencies": {
     "@tarojs/cli": "^1.2.0-beta.1",
     "@tarojs/plugin-babel": "^1.2.0-beta.1",
+    "@tarojs/plugin-csso": "^1.2.0-beta.1",
+    "@tarojs/plugin-uglifyjs": "^1.2.0-beta.1",
     "babel-preset-env": "^1.7.0"
   }
 }
