@@ -2,7 +2,7 @@ import Taro, { Component } from "@tarojs/taro";
 
 class App extends Component {
   config = {
-    pages: ["index"]
+    pages: ["pages/Home/index"]
   };
   render() {
     return null;
