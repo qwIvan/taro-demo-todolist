@@ -1,4 +1,7 @@
 module.exports = () => ({
   projectName: "scratch",
-  outputRoot: "dist"
+  outputRoot: "dist",
+  env: {
+    NODE_ENV: undefined
+  }
 });
