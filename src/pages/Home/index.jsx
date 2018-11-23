@@ -1,6 +1,7 @@
 import { Component } from "@tarojs/taro";
 import { connect } from "@tarojs/redux";
-import { AtButton, AtInput } from "taro-ui";
+import { View } from "@tarojs/components";
+import { AtButton, AtInput, AtCheckbox, AtDivider } from "taro-ui";
 
 @connect(
   ({ todo: { todos } }) => ({ todos }),
@@ -8,7 +9,8 @@ import { AtButton, AtInput } from "taro-ui";
 )
 class Home extends Component {
   state = {
-    text: ""
+    text: "",
+    completed: []
   };
   add = () => {
     const { add } = this.props;
@@ -18,16 +20,22 @@ class Home extends Component {
       this.setState({ text: "" });
     }
   };
-  handleChange = text => this.setState({ text });
+  handleInput = text => this.setState({ text });
+  handleCheck = value => this.setState({ completed: value });
   render() {
     const { todos } = this.props;
-    const { text } = this.state;
+    const { text, completed } = this.state;
     return (
-      <div>
-        <AtInput value={text} onChange={this.handleChange} />
+      <View>
+        <AtInput value={text} onChange={this.handleInput} />
         <AtButton onClick={this.add}>+</AtButton>
-        {todos}
-      </div>
+        <AtCheckbox
+          options={todos.map(todo => ({ value: todo.id, label: todo.text }))}
+          selectedList={completed}
+          onChange={this.handleCheck}
+        />
+        <AtDivider content={`${completed.length}/${todos.length}`} />
+      </View>
     );
   }
 }
