@@ -1,6 +1,6 @@
 import { Component } from "@tarojs/taro";
 import { connect } from "@tarojs/redux";
-import { Button, Input } from "@tarojs/components";
+import { AtButton, AtInput } from "taro-ui";
 
 @connect(
   ({ todo: { todos } }) => ({ todos }),
@@ -18,16 +18,14 @@ class Home extends Component {
       this.setState({ text: "" });
     }
   };
-  handleChange = e => {
-    this.setState({ text: e.target.value });
-  };
+  handleChange = text => this.setState({ text });
   render() {
     const { todos } = this.props;
     const { text } = this.state;
     return (
       <div>
-        <Input value={text} onInput={this.handleChange} />
-        <Button onClick={this.add}>+</Button>
+        <AtInput value={text} onChange={this.handleChange} />
+        <AtButton onClick={this.add}>+</AtButton>
         {todos}
       </div>
     );
