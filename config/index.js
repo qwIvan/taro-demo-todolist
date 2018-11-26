@@ -6,6 +6,7 @@ module.exports = () => ({
   },
   plugins: {
     babel: {
+      presets: ["env"],
       plugins: ["transform-class-properties", "transform-decorators-legacy"]
     }
   }
